@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Date" representedClassName="Date" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="dateForLocation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="locationForDate" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locationForDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Date" inverseName="dateForLocation" inverseEntity="Date" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Date" positionX="-81" positionY="-109" width="128" height="73"/>
+        <element name="Location" positionX="196" positionY="-126" width="128" height="88"/>
+    </elements>
+</model>
